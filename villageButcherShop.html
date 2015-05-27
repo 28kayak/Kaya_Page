@@ -7,28 +7,40 @@
 <script type="text/javascript"
   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
 </script>
+<link rel="stylesheet" type="text/css" href="css/villageButcherShop.css">
 <meta http-equiv="X-UA-Compatible" CONTENT="IE=EmulateIE7" />
 
 	<title>Village Butcher Shop Problem</title>
 </head>
 <body>
 <h1>Problem</h1>
-<p>The Village Butcher Shop traditionally makes its meat loaf from a combination of learn ground beef and ground pork. <br /> 
+<p class="problem">The Village Butcher Shop traditionally makes its meat loaf from a combination of learn ground beef and ground pork. <br /> 
 The ground beef contains 80% of meat and 20% fat and cost 80 cent per pound. <br />
 The ground pork contains 68% of mean and 20% fat and cost 60 cent per pound. <br />
-how much of each kind of meat should the shop use in each pound of meat loaf if it want to minimize its cost and to keep the fat contains of the meat loaf to no more then 25%??<br />
+How much of each kind of meat should the shop use in each pound of meat loaf if it want to minimize its cost and to keep the fat contains of the meat loaf to no more then 25%??<br />
+</p>
+<h1>Model</h1>
+<p>
+	<h2>Objective Function</h2>
+	To determine our objective function, <i> z </i> to be minimized quantity.<br />
+	our objective function is:<br />
+\begin{align*}
+ z & = the~total~cost~of~meat~loaf~per~pound \\
+   & = the~cost~of~ground~BEEF~per~pound~+~the~cost~of~ground~PORK~per~pound  \\
+   & = 80x_1 + 60x_2\\
+   \\
+   &where~x_1~is~the~number~of~pounds~for~the~ground~beef\\
+   &and~x_2~is~the~number~of~pounds~for~the~ground~pork.
+\end{align*}
+</p>
+<h2>Constrains</h2>
+<p class="constrains">
+total percentage of the fat in the meat loaf $\le$ 0.25 <br />
+$\Rightarrow$ percentage of the fat in beef + percentage of the fat in the pork $\le$ 0.25<br />
+$\Rightarrow 0.20x_1 + 0.32x_2 \le 0.25$ <br />
+Since the shop sell the meat loaf by pound, the toal meat loaf has to be 1 pound. <br />
+That is, $x_1 + x_2 = 1$
 </p>
 <h1>Solution</h1>
-<p>
-	<large>Step1: determine the quantity to optimized and express it mathematically.</large><br />
-	To determine our objective function, <i> z </i> to be minimized quantity.<br />
-	<i> z </i> = the total cost of meat loaf per pound 
-	= the cost of ground BEEF per pound + the cost of ground PORK per pound 
-\(\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}\)
-</script>
-
-
-
-</p>
 </body>
 </html>
