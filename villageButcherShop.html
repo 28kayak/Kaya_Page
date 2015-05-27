@@ -13,13 +13,16 @@
 	<title>Village Butcher Shop Problem</title>
 </head>
 <body>
+<div class="prob">
 <h1>Problem</h1>
-<p class="problem">The Village Butcher Shop traditionally makes its meat loaf from a combination of learn ground beef and ground pork. <br /> 
+<p>The Village Butcher Shop traditionally makes its meat loaf from a combination of learn ground beef and ground pork. <br /> 
 The ground beef contains 80% of meat and 20% fat and cost 80 cent per pound. <br />
 The ground pork contains 68% of mean and 20% fat and cost 60 cent per pound. <br />
 How much of each kind of meat should the shop use in each pound of meat loaf if it want to minimize its cost and to keep the fat contains of the meat loaf to no more then 25%??<br />
 </p>
-<h1>Model</h1>
+</div>
+<div class="model">
+<h1>Setting Up Model</h1>
 <p>
 	<h2>Objective Function</h2>
 	To determine our objective function, <i> z </i> to be minimized quantity.<br />
@@ -41,6 +44,36 @@ $\Rightarrow 0.20x_1 + 0.32x_2 \le 0.25$ <br />
 Since the shop sell the meat loaf by pound, the toal meat loaf has to be 1 pound. <br />
 That is, $x_1 + x_2 = 1$
 </p>
+<h2>Mathematical Model</h2>
+\begin{eqnarray}
+&Minimize&~~z = 80x_1 + 60x_2\\
+&Subject~to~&0.20x_1 + 0.32x_2 \le 0.25~~~~~~~~~(a)\\
+&~~~~~~~~~~~&~x_1 + x_2 = 1
+\end{eqnarray}
+<br />
+</div>
+
+
+
+
 <h1>Solution</h1>
+<p>We will solve this problem with geomatrically.
+To do so, we first solve for $x_1$ and $x_2$ from (a).<br />
+For $x_1$, 
+\begin{eqnarray}
+0.20x_1 + 0.32x_2 = 0.25\\
+0.20x_1 = 0.25 - 0.32x_2\\
+x_1 = \frac{0.25}{0.2}-\frac{0.32}{0.2}x_2
+\end{eqnarray}
+For $x_2$, 
+\begin{eqnarray}
+0.20x_1 + 0.32x_2 = 0.25\\
+0.32x_2 = 0.25 - 0.20x_2\\
+x_2 = \frac{0.25}{0.32}-\frac{0.2}{0.32}x_1
+\end{eqnarray}
+We drow the graph.
+<img src="/Users/kaya/Documents/Kaya_Page/Math/RES/villageButcherShop.png">
+</p>
+
 </body>
 </html>
